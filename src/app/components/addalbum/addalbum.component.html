@@ -1,0 +1,73 @@
+<div class="contact-form-container">
+    <h2>Add album</h2>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="contact-form">
+      <div class="form-group">
+        <label for="title">album Name</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          name="title" 
+          [(ngModel)]="album.title"
+          #title="ngModel" 
+          required 
+          minlength="3" 
+          placeholder="Enter menu name"
+        />
+        <app-form-validation [control]="title"></app-form-validation>
+      </div>
+  
+      <div class="form-group">
+        <label for="creationDate">creation date</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          name="creationDate" 
+          [(ngModel)]="album.creationDate" 
+          #creationDate="ngModel" 
+          required 
+          minlength="3" 
+          placeholder="Enter date"
+        />
+        <app-form-validation [control]="creationDate"></app-form-validation>
+      </div>
+  
+      <div class="form-group">
+        <label for="archived">archived</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          name="archived" 
+          [(ngModel)]="album.archived" 
+          #archived="ngModel" 
+          required 
+          placeholder="Enter price"
+        />
+        <app-form-validation [control]="archived"></app-form-validation>
+      </div>
+  
+      <div class="form-group">
+        <label for="coverPicture">coverPicture</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          name="coverPicture" 
+          [(ngModel)]="album.coverPicture" 
+          #coverPicture="ngModel" 
+          required 
+          placeholder="Enter image URL"
+        />
+        <app-form-validation [control]="coverPicture"></app-form-validation>
+      </div>
+  
+      <div class="form-group">
+        <button 
+          type="submit" 
+          class="btn btn-primary" 
+          [disabled]="f.invalid"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+  

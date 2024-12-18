@@ -1,0 +1,11 @@
+/* General styles for the footer */
+.footer {
+    background-color: #333;     /* Dark background for the footer */
+    color: #fff;                /* White text */
+    padding: 20px 0;            /* Padding for the footer */
+    font-family: Arial, sans-serif; /* Font style */
+    position: relative;         /* This will be used with flexbox layout */
+    width: 100%;
+  }
+  
+ 
